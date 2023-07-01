@@ -1,0 +1,232 @@
+﻿<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style2.css">
+        <title>PYCRAFT - Новости</title>
+    </head>
+    <body bgcolor="#222">
+        <img id='imgf' src='p.png'>
+        <div id="main">
+        	<div id='line2'></div>
+           <div id='name'>Новости сервера</div>
+           <div onmouseover='t=1' onmouseout='t=0' id='pages'>
+           	<div id='ForPages'></div>
+           	<div id='TextFPicture2'><div id='TextFPicture3'></div><div id='TextFPicture'></div></div>
+           	<div id='next'></div>
+           	<div id='noNext'></div>
+           	<div id='Tochki'></div>
+           </div>
+           <div id='line3'></div>
+           <div id='PagesNews'>
+           	<div id='PagesName'>Обновления:</div>
+           	<ul id='PagesText'>
+           		<li>Новый сайт!</li>
+           		<li>Квесты!</li>
+           		<li>Свой лаунчер!</li>
+           		<li>Новые звания!</li>
+           		<li>Усовершенствование старых!</li>
+           		<li>3 гильдии!</li>
+           		<li>И многое другое</li>
+           	</ul>
+           	<img id='smiles' src='smile.png'>
+           </div>
+           <div id='PagesNews2'></div>
+           <div id='List'>
+           	<div id='Listovka'>Мы рады,что именно вы посетили наш сервер:D</div>
+           </div>
+           <img id='img1' src='p1.png'>
+           	<img id='img2' src='p2.png'>
+           <div id='time'></div>
+           <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+			<script src="https://yastatic.net/share2/share.js"></script>
+			<a href='https://vk.com/py_craft' id='vk'>Мы в <pc class='nan'>VKontakte</pc></a>
+			<div id='you'>Мы в <pc class='nan'>YouTube</pc></div>
+			<div class="ya-share2" data-services="vkontakte,odnoklassniki,twitter,telegram"></div>
+           <iframe id='curs' style="width:620px;border:0;overflow:hidden;background-color:transparent;height:72px" scrolling="no" src="https://fortrader.org/informers/getInformer?st=17&cat=7&title=%D0%9A%D1%83%D1%80%D1%81%D1%8B%20%D0%B2%D0%B0%D0%BB%D1%8E%D1%82%20%D0%A6%D0%91%20%D0%A0%D0%A4&texts=%7B%22toolTitle%22%3A%22%D0%92%D0%B0%D0%BB%D1%8E%D1%82%D0%B0%22%2C%22todayCourse%22%3A%22RUB%22%7D&mult=0.85&showGetBtn=0&hideHeader=1&hideDate=1&w=620&codes=1&colors=titleTextColor%3D454545%2CtitleBackgroundColor%3Dfff%2CsymbolTextColor%3D888888%2CtableTextColor%3D888888%2CborderTdColor%3De3e3e3%2CtableBorderColor%3De3e3e3%2CtrBackgroundColor%3D000000%2CitemImgBg%3DF1F1F1%2CprofitTextColor%3D89bb50%2CprofitBackgroundColor%3Deaf7e1%2ClossTextColor%3Dff1616%2ClossBackgroundColor%3Df6e1e1%2CinformerLinkTextColor%3Daaaaaa%2CinformerLinkBackgroundColor%3D000000&items=2%2C21%2C49%2C14&columns=&toCur=11111"></iframe>
+        </div>
+        <div id='MainMenu'>
+        <div id="menu1">
+            <div id='elem'></div>
+            <div id='elem1'></div>
+            <div id="menu"></div>
+            <a href='http://www.pycraft.info' id="news"><span>НОВОСТИ</span></a>
+            <a href='http://www.top.pycraft.info' id="top"><span>ТОП ИГРОКОВ</span></a>
+            <a href='http://www.donat.pycraft.info' id="donat"><span>ДОНАТ</span></a>
+            <a href='http://www.admins.pycraft.info' id="admins"><span>АДМИНЫ</span></a>
+            <a href='http://www.launcher.pycraft.info' id="launcher"><span>ЛАУНЧЕР</span></a>
+        </div>
+        </div>
+        <script type="text/javascript" src='doc.js'></script>
+        <script type="text/javascript">
+        var date=new Date()
+        var t=0
+        var minutss=date.getMinutes()
+			if(minutss >=0 && minutss <10 ){
+				minutss='0'+minutss
+			}
+			var sec=date.getSeconds()
+			if(sec >=0 && sec <10 ){
+				sec='0'+sec
+			}
+			var timeNow=date.getHours()+':'+minutss+':'+sec+' '+date.getDate()+'.'+(date.getMonth()+1)+'.'+date.getFullYear()
+			document.getElementById('time').innerHTML=timeNow
+        var time=0
+        var slide=0
+        var elem
+        var textIn=document.getElementById('Listovka').innerHTML
+        if(date.getHours >= 12 && date.getHours <= 17){
+        	document.getElementById('Listovka').innerHTML='Добрый день!'+textIn
+        }else if(date.getHours >=11  && date.getHours <=6){
+			document.getElementById('Listovka').innerHTML='Доброе утро!'+textIn
+        }else if(date.getHours >=5  && date.getHours <=0){
+			document.getElementById('Listovka').innerHTML='Доброй ночи!'+textIn
+        }else if(date.getHours >=23  && date.getHours <=18){
+			document.getElementById('Listovka').innerHTML='Добрый вечер!'+textIn
+        }
+        var TxtBlock=document.getElementById('TextFPicture')
+        var Mains=document.getElementById('Tochki')
+        var MainElem=document.getElementById('ForPages')
+        if(pict.length > texts.length){
+        	var count=texts.length
+        }
+        if(pict.length <= texts.length){
+        	var count=pict.length
+        }
+        Mains.style.width=(10*count-5)+'px'
+        for(var n=0;n<count;n++){
+        	elem=document.createElement('img')
+        	elem.src='news/img/'+(n+1)+'.png'
+        	elem.style.width='100%'
+        	elem.style.height='100%'
+        	elem.id='Picture'+(n+1)
+        	elem.style.position='absolute'
+        	elem.style.top='0%'
+        	elem.style.left=n*100+'%'
+        	elem.style.transition='0.4s'
+        	elem.style.borderRadius='20px'
+        	MainElem.appendChild(elem)
+        }
+        for(var n=0;n<count;n++){
+        	elem=document.createElement('div')
+        	elem.style.backgroundColor='#000'
+        	elem.style.width='15px'
+        	elem.style.opacity='0.8'
+        	elem.style.height='15px'
+        	elem.id='Tochka'+(n+1)
+        	elem.style.position='absolute'
+        	elem.style.top='0%'
+        	elem.style.left=n*20+'px'
+        	elem.style.transition='0.2s'
+        	elem.style.borderRadius='50%'
+        	Mains.appendChild(elem)
+        }
+        for(var n=0;n<count;n++){
+        	elem=document.createElement('div')
+        	elem.style.width='100%'
+        	elem.style.height='100%'
+        	elem.id='Texty'+(n+1)
+        	elem.style.position='absolute'
+        	elem.style.top='0%'
+        	elem.style.left=n*100+'%'
+        	elem.style.transition='0.2s'
+        	elem.style.borderRadius='20px'
+        	elem.style.fontSize='30px'
+        	elem.style.fontFamily='Arial'
+        	elem.style.fontStyle='italic'
+        	elem.style.color='white'
+        	elem.style.lineHeight='120%'
+        	elem.style.marginLeft='0.5%'
+        	elem.innerHTML=MainTexts[n]
+        	document.getElementById('PagesNews2').appendChild(elem)
+        }
+        document.getElementById('Tochka1').style.backgroundColor='grey'
+        TxtBlock.innerHTML=texts[0]
+        setInterval(go,1000)
+        function go(){
+        if(t==0){
+        time++
+        if(time==5){
+        time=0
+        slide++
+        for(var n=0;n<count;n++){
+        var Znsak=document.getElementById('Picture'+(n+1)).style.left
+        var mass=Znsak.split('')
+        mass.pop()
+        Znsak=mass.join('')
+        document.getElementById('Picture'+(n+1)).style.left=(Znsak-100)+'%'
+        }
+        for(var n=0;n<count;n++){
+        var Znsak=document.getElementById('Texty'+(n+1)).style.left
+        var mass=Znsak.split('')
+        mass.pop()
+        Znsak=mass.join('')
+        document.getElementById('Texty'+(n+1)).style.left=(Znsak-100)+'%'
+        }
+        if(slide==count){
+        slide=0
+        for(var n=0;n<count;n++){
+  		document.getElementById('Tochka'+(n+1)).style.backgroundColor='black'
+  		}
+  		document.getElementById('Tochka'+(slide+1)).style.backgroundColor='grey'
+        for(var n=0;n<count;n++){
+        var Znsak=document.getElementById('Picture'+(n+1)).style.left
+        var mass=Znsak.split('')
+        mass.pop()
+        Znsak=mass.join('')
+        document.getElementById('Picture'+(n+1)).style.left=(100*n)+'%' 
+        }
+        for(var n=0;n<count;n++){
+        var Znsak=document.getElementById('Texty'+(n+1)).style.left
+        var mass=Znsak.split('')
+        mass.pop()
+        Znsak=mass.join('')
+        document.getElementById('Texty'+(n+1)).style.left=(100*n)+'%' 
+        }
+  		}else{
+  		for(var n=0;n<count;n++){
+  		document.getElementById('Tochka'+(n+1)).style.backgroundColor='black'
+  		}
+  		document.getElementById('Tochka'+(slide+1)).style.backgroundColor='grey'
+  		}
+  		TxtBlock.innerHTML=texts[slide]
+        }
+		}
+		}
+		function Next(){
+		time=-10
+		slide++
+		document.getElementById('').style.left='100%'
+		document.getElementById('').style.left='100%'
+		}
+		function NoNext(){
+		time=-10
+		slide--
+		}
+		setInterval(timer,1000)
+		function timer(){
+			var date=new Date()
+			var minutss=date.getMinutes()
+			if(minutss >=0 && minutss <10 ){
+				minutss='0'+minutss
+			}
+			var sec=date.getSeconds()
+			if(sec >=0 && sec <10 ){
+				sec='0'+sec
+			}
+			var timeNow=date.getHours()+':'+minutss+':'+sec+' '+date.getDate()+'.'+(date.getMonth()+1)+'.'+date.getFullYear()
+			document.getElementById('time').innerHTML=timeNow
+		}
+		var r=100
+		setInterval(timers,20)
+		function timers(){
+			r-=0.25
+			document.getElementById('Listovka').style.left=r+"%"
+			if(r<=-100){
+				r=100
+				var i=Math.floor(Math.random()*((textFListovka.length-1)-0+1))+0
+				document.getElementById('Listovka').innerHTML=textFListovka[i]
+			}
+		}
+        </script>
+</html>
